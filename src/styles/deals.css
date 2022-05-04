@@ -1,8 +1,6 @@
 .page-header {
   background-color: #b8932b;
   color: #ffffff;
-  font-style: normal;
-  font-weight: 800;
   margin-bottom: 64px;
 }
 
@@ -10,13 +8,10 @@
   max-width: 1272px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 76px;
-  padding-right: 76px;
 }
 
 .deals-page-header {
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding: 32px 76px;
 }
 
 .deals-page-header__main {
@@ -26,6 +21,8 @@
 .page-header__title {
   font-size: 72px;
   letter-spacing: -0.01em;
+  font-style: normal;
+  font-weight: 800;
 }
 
 .deals-page-header__title {
@@ -36,6 +33,11 @@
 .page-header__details {
   display: flex;
   justify-content: space-between;
+}
+
+.page-header__info-block {
+  font-style: normal;
+  font-weight: 800;
 }
 
 .page-header__info-block:not(:last-child) {
@@ -53,9 +55,15 @@
 
 .page-header__right-side {
   display: flex;
+  align-self: end;
+  background-color: transparent;
+  border: none;
+  color: white;
+  height: min-content;
+  margin-right: 108px;
 }
 
-.page-header__filter {
+.page-header__filter-tab-button {
   font-family: "Inter";
   font-style: normal;
   font-weight: 900;
@@ -63,12 +71,8 @@
   letter-spacing: 0.01em;
   text-transform: uppercase;
   margin-top: auto;
-}
-
-.page-header__filter::after {
-  content: url("../assets/icons/filter.svg");
-  margin-left: 11px;
-  vertical-align: middle;
+  margin-bottom: auto;
+  margin-right: 11px;
 }
 
 .deals-table__wrapper {
@@ -76,7 +80,7 @@
 }
 
 .deals-main {
-  max-width: 1272px;
+  max-width: 1056px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 76px;
@@ -190,13 +194,139 @@
   padding-right: 48px;
 }
 
+.table__cell-last {
+  padding-left: 24px;
+  padding-right: 32px;
+}
+
 .deals-table__search {
+  position: absolute;
+  top: -7px;
+  right: 0;
+}
+
+.deals-table__search {
+  display: flex;
+}
+
+.deals-table__search-icon {
+  display: flex;
+  margin-right: 4px;
+}
+
+.deals-table__search-bar {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  border: none;
+  display: block;
+  width: 107px;
+}
+
+.deals-table__show-more {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 202px;
+  height: 32px;
+  background: #ffffff;
+  border: 1px solid #000000;
+}
+
+.deals-table__show-more-content {
+  margin: auto;
+}
+
+.deals-table__page-count {
+  width: 38px;
+  height: 16px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #999999;
+  margin-right: 10px;
+}
+
+.deals-table__show-more-text {
+  width: 122px;
+  height: 22px;
+  font-family: "Zona Pro";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px;
+  letter-spacing: 0.01em;
+  color: #000000;
+}
+
+.deals-main__table {
+  margin-bottom: 56px;
+}
+
+.page-header__filter {
+  position: relative;
+  max-width: 1272px;
+  margin: 11.5px auto 0;
+  display: none;
+}
+
+.page-header__filter-border-wrapper {
+  margin-bottom: 24.5px;
+  overflow-x: hidden;
+  position: relative;
+  height: 27px;
+}
+
+.page-header__filter-border {
+  max-width: 1272px;
   position: absolute;
   top: 0;
   right: 0;
 }
 
-.table__cell-last {
-  padding-left: 24px;
-  padding-right: 32px;
+.page-header__filter-options {
+  display: flex;
+  align-items: flex-end;
+}
+
+.page-header__filter-option {
+  display: inline-flex;
+  flex-direction: column;
+  margin-right: 40px;
+}
+
+.page-header__filter-option-select {
+  width: 232px;
+  height: 40px;
+  border: 2px solid #000000;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #999999;
+  padding: 9px 16px;
+}
+
+.page-header__filter-button {
+  width: 130px;
+  height: 40px;
+  background-color: white;
+  margin-top: auto;
+  border: none;
+  font-family: "Zona Pro";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px;
+  letter-spacing: 0.01em;
+}
+
+.page-header__filter-option-title {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  margin-bottom: 10px;
 }

@@ -1,5 +1,6 @@
 import table from "../../assets/icons/table.svg";
 import map from "../../assets/icons/map.svg";
+import linkIcon from "../../assets/icons/link.svg";
 
 function Main() {
   return (
@@ -46,7 +47,34 @@ function Main() {
 
       <div className="deals-table__wrapper">
         <div className="deals-table__search">
-          <input type="text" placeholder="Быстрый поиск" />
+          <div className="deals-table__search-icon">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M16 15L22 21L20.5858 22.4142L14.5858 16.4142L16 15Z"
+                fill="#999999"
+              />
+              <path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M10.5 17C14.0899 17 17 14.0899 17 10.5C17 6.91015 14.0899 4 10.5 4C6.91015 4 4 6.91015 4 10.5C4 14.0899 6.91015 17 10.5 17ZM10.5 19C15.1944 19 19 15.1944 19 10.5C19 5.80558 15.1944 2 10.5 2C5.80558 2 2 5.80558 2 10.5C2 15.1944 5.80558 19 10.5 19Z"
+                fill="#999999"
+              />
+            </svg>
+          </div>
+
+          <input
+            type="text"
+            placeholder="Быстрый поиск"
+            className="deals-table__search-bar"
+          />
         </div>
         <table className="table deals-main__table">
           <colgroup>
@@ -86,7 +114,7 @@ function Main() {
                 TMT Investments
               </td>
               <td className="table__body-cell table__col-fixed table__cell-last">
-                1
+                <img src={linkIcon} alt="" />
               </td>
             </tr>
             <tr className="table-row">
@@ -107,7 +135,7 @@ function Main() {
                 Investments, Xploration Capital, Learn Capital
               </td>
               <td className="table__body-cell table__col-fixed table__cell-last">
-                1
+                <img src={linkIcon} alt="" />
               </td>
             </tr>
             <tr className="table-row">
@@ -127,7 +155,7 @@ function Main() {
                 Sequoia Capital, G Squared, D1 Capital Partners
               </td>
               <td className="table__body-cell table__col-fixed table__cell-last">
-                1
+                <img src={linkIcon} alt="" />
               </td>
             </tr>
             <tr className="table-row">
@@ -147,11 +175,17 @@ function Main() {
                 Angelsdeck
               </td>
               <td className="table__body-cell table__col-fixed table__cell-last">
-                1
+                <img src={linkIcon} alt="" />
               </td>
             </tr>
           </tbody>
         </table>
+        <button className="deals-table__show-more">
+          <div className="deals-table__show-more-content">
+            <span className="deals-table__page-count">15/32</span>
+            <span className="deals-table__show-more-text">Показать еще</span>
+          </div>
+        </button>
       </div>
     </main>
   );
