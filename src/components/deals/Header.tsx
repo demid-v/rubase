@@ -1,7 +1,14 @@
+import { useState } from "react";
 import filterIcon from "../../assets/icons/filter.svg";
 import headerBorderIcon from "../../assets/icons/header-border.svg";
 
 function Header() {
+  const [filterOpen, setFilterOpened] = useState(false);
+
+  function toggleFilter() {
+    setFilterOpened(!filterOpen);
+  }
+
   return (
     <header className="page-header deals-page-header">
       <div className="page-header__content">
@@ -21,14 +28,21 @@ function Header() {
               <span className="page-header__info-amount">192 млн. $</span>
             </span>
           </div>
-          <button className="page-header__right-side">
+          <button className="page-header__right-side" onClick={toggleFilter}>
             <span className="page-header__filter-tab-button">Фильтр</span>
             <img src={filterIcon} alt="" />
           </button>
         </div>
       </div>
 
-      <div className="page-header__filter">
+      <div
+        className={
+          "page-header__filter" +
+          (filterOpen
+            ? " page-header__filter_open"
+            : " page-header__filter_closed")
+        }
+      >
         <div className="page-header__filter-border-wrapper">
           <img
             src={headerBorderIcon}

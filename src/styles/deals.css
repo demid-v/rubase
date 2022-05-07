@@ -222,6 +222,9 @@
   border: none;
   display: block;
   width: 107px;
+  height: min-content;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .deals-table__show-more {
@@ -270,7 +273,14 @@
   position: relative;
   max-width: 1272px;
   margin: 11.5px auto 0;
+}
+
+.page-header__filter_closed {
   display: none;
+}
+
+.page-header__filter_open {
+  display: block;
 }
 
 .page-header__filter-border-wrapper {
